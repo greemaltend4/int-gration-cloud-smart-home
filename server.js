@@ -20,7 +20,7 @@ app.get('/api/devices', (req, res) => {
     })
     .catch(error => {
       console.error(error);
-      res.status(500).send('Erreur lors de la récupération des appareils');
+      res.status(500).send('An error occurred while retrieving devices.');
     });
 });
 
