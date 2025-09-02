@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 // Initialize Firebase
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
-  databaseURL: 'https://my-new-project-id.firebaseio.com'
+  databaseURL: 'https://my-updated-project-id.firebaseio.com'
 });
 
 app.get('/api/devices', (req, res) => {
@@ -25,5 +25,5 @@ app.get('/api/devices', (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Le serveur est à l'écoute sur le port 3000');
+  console.log('Le serveur est à l\'écoute sur le port 3000');
 });
