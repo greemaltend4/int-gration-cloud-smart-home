@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 // Initialize Firebase
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
-  databaseURL: 'https://my-updated-project-id.firebaseio.com'
+  databaseURL: 'https://my-new-project-id.firebaseio.com'
 });
 
 app.get('/api/devices', (req, res) => {
