@@ -13,6 +13,15 @@ admin.initializeApp({
 
 app.get('/api/devices', (req, res) => {
   // Logique pour récupérer les appareils
+  admin.database().ref('/devices').once('value')
+    .then(snapshot => {
+      const devices = snapshot.val();
+      res.status(200).json(devices);
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).send('Erreur lors de la récupération des appareils');
+    });
 });
 
 app.listen(3000, () => {
